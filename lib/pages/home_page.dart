@@ -1,9 +1,9 @@
-import 'package:assignment_1/chip_button.dart';
-import 'package:assignment_1/drinks_card.dart';
-import 'package:assignment_1/list_card.dart';
-import 'package:assignment_1/party_dates.dart';
-import 'package:assignment_1/profile_image.dart';
-import 'package:assignment_1/tab_button.dart';
+import 'package:assignment_1/hompage_widgets/chip_button.dart';
+import 'package:assignment_1/hompage_widgets/drinks_card.dart';
+import 'package:assignment_1/hompage_widgets/list_card.dart';
+import 'package:assignment_1/hompage_widgets/party_dates.dart';
+import 'package:assignment_1/hompage_widgets/profile_image.dart';
+import 'package:assignment_1/hompage_widgets/tab_button.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: BottomAppBar(
           color: Colors.transparent,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               IconButton(
                   onPressed: () {},
@@ -27,28 +28,24 @@ class _HomePageState extends State<HomePage> {
                     Icons.home,
                     color: Colors.white,
                   )),
-              Spacer(),
               IconButton(
                   onPressed: () {},
                   icon: Icon(
                     Icons.speaker_outlined,
                     color: Colors.white,
                   )),
-              Spacer(),
               IconButton(
                   onPressed: () {},
                   icon: Icon(
                     Icons.flash_on_outlined,
                     color: Colors.white,
                   )),
-              Spacer(),
               IconButton(
                   onPressed: () {},
                   icon: Icon(
                     Icons.confirmation_num_outlined,
                     color: Colors.white,
                   )),
-              Spacer(),
               IconButton(
                   onPressed: () {},
                   icon: Icon(
@@ -57,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                   )),
             ],
           )),
-      backgroundColor: Color.fromARGB(255, 42, 40, 40),
+      backgroundColor: Color.fromARGB(255, 41, 1, 52),
       body: Center(
         child: SingleChildScrollView(
           child: Stack(
@@ -77,11 +74,16 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
+                  // decoration: BoxDecoration(
+                  //     gradient: LinearGradient(colors: [
+                  //   Color.fromARGB(255, 62, 0, 72),
+                  //   Color.fromARGB(255, 76, 1, 77)
+                  // ])),
                   alignment: Alignment.topCenter,
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(16.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -191,7 +193,12 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       //##
-
+                      // ListView.builder(
+                      //   itemBuilder: (context, index) {
+                      //     return PartyDates();
+                      //   },
+                      //   itemCount: 4,
+                      // ),
                       PartyDates(),
 
                       PartyDates(),
@@ -214,6 +221,26 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       ProfileImages(),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Exclusive Events",
+                                style: TextStyle(
+                                    fontSize: 25, color: Colors.white),
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Text("See All",
+                                      style: TextStyle(color: Colors.white)))
+                            ],
+                          ),
+                        ),
+                      ),
+                      ListCard()
                     ],
                   )),
             ],

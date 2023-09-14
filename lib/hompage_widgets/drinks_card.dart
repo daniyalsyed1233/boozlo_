@@ -13,6 +13,7 @@ class _DrinksCardState extends State<DrinksCard> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
+        height: 100,
         decoration: BoxDecoration(
             color: Color.fromARGB(157, 83, 30, 93),
             borderRadius: BorderRadius.circular(15),
@@ -22,8 +23,6 @@ class _DrinksCardState extends State<DrinksCard> {
                   blurRadius: 10,
                   offset: const Offset(0, 3))
             ]),
-        height: 100,
-        width: double.infinity,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
