@@ -19,7 +19,10 @@ class _TabButtonState extends State<TabButton> {
               icon: Icon(Icons.cut_outlined),
             ),
             Tab(
-              child: Text("Choose Date"),
+              child: Text(
+                "Choose Date",
+                style: TextStyle(fontSize: 12),
+              ),
               icon: Icon(Icons.calendar_month_outlined),
             ),
             Tab(
@@ -27,7 +30,10 @@ class _TabButtonState extends State<TabButton> {
               icon: Icon(Icons.people_alt_outlined),
             ),
             Tab(
-              child: Text("Most Followed"),
+              child: Text(
+                "Most Followed",
+                style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+              ),
               icon: Icon(Icons.people_alt_outlined),
             ),
           ],

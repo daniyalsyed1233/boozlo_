@@ -33,6 +33,7 @@ class _ProfileImagesState extends State<ProfileImages> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(
           6,
           ((index) => Container(
