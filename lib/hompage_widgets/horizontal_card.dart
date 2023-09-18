@@ -30,6 +30,7 @@ class _HorizontalCardState extends State<HorizontalCard> {
               alignment: Alignment.topCenter,
               child: Image.asset(
                 "assets/hh.png",
+
                 height: 250,
                 // width: double.infinity,
                 fit: BoxFit.cover,

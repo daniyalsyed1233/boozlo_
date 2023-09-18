@@ -19,11 +19,11 @@ class _ListCardState extends State<ListCard> {
             // This next line does the trick.
             scrollDirection: Axis.horizontal,
             children: <Widget>[
-              HorizontalCard(),
-              HorizontalCard(),
-              HorizontalCard(),
-              HorizontalCard(),
-              HorizontalCard()
+              for (int i = 1; i <= 10; i++) HorizontalCard(),
+              // HorizontalCard(),
+              // HorizontalCard(),
+              // HorizontalCard(),
+              // HorizontalCard()
             ]));
   }
 }

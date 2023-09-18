@@ -52,6 +52,7 @@ class _HomePageState extends State<HomePage> {
                       PartyDatesCard(),
                       ArtistWidget(),
                       ExclusiveEventWidget(),
+                      MusicGigs(),
                       BottomBarWidget(),
                     ],
                   )),
@@ -122,10 +123,7 @@ class PartyDatesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        PartyDates(),
-        PartyDates(),
-        PartyDates(),
-        PartyDates(),
+        for (int i = 1; i <= 5; i++) PartyDates(),
       ],
     );
   }
@@ -148,6 +146,39 @@ class ExclusiveEventWidget extends StatelessWidget {
               children: [
                 Text(
                   "Exclusive Events",
+                  style: TextStyle(fontSize: 25, color: Colors.white),
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child:
+                        Text("See All", style: TextStyle(color: Colors.white)))
+              ],
+            ),
+          ),
+        ),
+        ListCard()
+      ],
+    );
+  }
+}
+
+class MusicGigs extends StatelessWidget {
+  const MusicGigs({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Music Gigs",
                   style: TextStyle(fontSize: 25, color: Colors.white),
                 ),
                 TextButton(
